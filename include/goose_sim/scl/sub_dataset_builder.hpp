@@ -1,0 +1,10 @@
+#pragma once
+#include "goose_sim/model/types.hpp"
+#include <vector>
+
+namespace goose_sim::scl {
+class SubDatasetBuilder {
+public:
+    static std::vector<model::DataSet> build(const model::IedModel& ied);
+};
+}
