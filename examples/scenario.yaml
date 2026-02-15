@@ -1,0 +1,18 @@
+timebase: ms
+events:
+  - at: 1000
+    ied: P1
+    dataset: TripDS
+    values:
+      XCBR1.Pos.stVal: true
+  - at: 1500
+    ied: P1
+    dataset: TripDS
+    values:
+      XCBR1.Pos.stVal: false
+expect:
+  - after: 1000
+    within: 20
+    ied: B1
+    value:
+      XCBR1.Pos.stVal: true
